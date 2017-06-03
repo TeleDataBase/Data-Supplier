@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<channelRanklist>
+  <channel>
+    <countryRanking>2</countryRanking>
+    <name>BTV</name>
+    <corporationName>BTV Media Group</corporationName>
+    <countryName>Bulgaria</countryName>
+    <sponsor>
+      <sponsorName>Zara</sponsorName>
+      <sponsorDescription>Style is key.</sponsorDescription>
+    </sponsor>
+    <owner>
+      <firstName>Pavel</firstName>
+      <lastName>Stanchev</lastName>
+      <netWorth>15050000</netWorth>
+    </owner>
+  </channel>
+</channelRanklist>
