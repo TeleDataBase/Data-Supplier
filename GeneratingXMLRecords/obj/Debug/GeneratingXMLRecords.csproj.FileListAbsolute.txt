@@ -1,6 +1,0 @@
-D:\Telerik academy\Side Projects\DatabaseDataProvider\GeneratingXMLRecords\bin\Debug\GeneratingXMLRecords.exe.config
-D:\Telerik academy\Side Projects\DatabaseDataProvider\GeneratingXMLRecords\bin\Debug\GeneratingXMLRecords.exe
-D:\Telerik academy\Side Projects\DatabaseDataProvider\GeneratingXMLRecords\bin\Debug\GeneratingXMLRecords.pdb
-D:\Telerik academy\Side Projects\DatabaseDataProvider\GeneratingXMLRecords\obj\Debug\GeneratingXMLRecords.csprojResolveAssemblyReference.cache
-D:\Telerik academy\Side Projects\DatabaseDataProvider\GeneratingXMLRecords\obj\Debug\GeneratingXMLRecords.exe
-D:\Telerik academy\Side Projects\DatabaseDataProvider\GeneratingXMLRecords\obj\Debug\GeneratingXMLRecords.pdb
