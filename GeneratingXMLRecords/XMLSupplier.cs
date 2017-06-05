@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Xml.Linq;
 
 namespace GeneratingXMLRecords
@@ -14,8 +15,7 @@ namespace GeneratingXMLRecords
 
         private XElement RootElement { get; set; }
 
-        public XElement CreateChannel(string channelName, int rankPlace, string corporationName, string countryName,
-            string sponsorName, string sponsorDescription, string ownerFirstName, string ownerLastName,
+        public XElement CreateChannel(string channelName, int rankPlace, string corporationName, string countryName, string ownerFirstName, string ownerLastName,
             int ownerNetWorth)
         {
             XElement channelXml = new XElement("channel",
@@ -23,10 +23,7 @@ namespace GeneratingXMLRecords
                 new XElement("name", channelName),
                 new XElement("corporationName", corporationName),
                 new XElement("countryName", countryName),
-                new XElement("sponsor",
-                    new XElement("sponsorName", sponsorName),
-                    new XElement("sponsorDescription", sponsorDescription)
-                    ),
+                new XElement("sponsors"),
                 new XElement("owner",
                     new XElement("firstName", ownerFirstName),
                     new XElement("lastName", ownerLastName),
@@ -40,6 +37,30 @@ namespace GeneratingXMLRecords
         {
             XElement catalog = new XElement(catalogName);
             return catalog;
+        }
+
+        public XElement CreateSponsor(string sponsorName, string sponsorDescription)
+        {
+            var sponsor = new XElement("sponsor",
+                    new XElement("sponsorName", sponsorName),
+                    new XElement("sponsorDescription", sponsorDescription)
+                    );
+
+            return sponsor;
+        }
+
+        public void AddSponsorToChannel(XElement sponsor, string channelName)
+        {
+            var channel = this.RootElement.Descendants()
+                .Where(x => x.Name == "name" && x.Value == channelName)
+                .Select(y => y.Parent)
+                .FirstOrDefault();
+
+            var channelSponsors = channel.Descendants()
+            .Where(x => x.Name == "sponsors")
+            .FirstOrDefault();
+
+            channelSponsors.Add(sponsor);
         }
 
         public void AddChannelToCatalog(XElement channel)

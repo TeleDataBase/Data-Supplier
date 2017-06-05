@@ -5,10 +5,12 @@
     <name>BTV</name>
     <corporationName>BTV Media Group</corporationName>
     <countryName>Bulgaria</countryName>
-    <sponsor>
-      <sponsorName>Zara</sponsorName>
-      <sponsorDescription>Style is key.</sponsorDescription>
-    </sponsor>
+    <sponsors>
+      <sponsor>
+        <sponsorName>Hippoland</sponsorName>
+        <sponsorDescription>Igrachki za vas.</sponsorDescription>
+      </sponsor>
+    </sponsors>
     <owner>
       <firstName>Pavel</firstName>
       <lastName>Stanchev</lastName>
