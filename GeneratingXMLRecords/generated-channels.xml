@@ -3,8 +3,12 @@
   <channel>
     <countryRanking>2</countryRanking>
     <name>BTV</name>
-    <corporationName>BTV Media Group</corporationName>
-    <countryName>Bulgaria</countryName>
+    <corporation>
+      <corporationName>BTV Media Group</corporationName>
+    </corporation>
+    <country>
+      <countryName>Bulgaria</countryName>
+    </country>
     <sponsors>
       <sponsor>
         <sponsorName>Hippoland</sponsorName>

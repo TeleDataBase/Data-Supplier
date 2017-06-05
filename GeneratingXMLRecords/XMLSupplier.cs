@@ -21,8 +21,12 @@ namespace GeneratingXMLRecords
             XElement channelXml = new XElement("channel",
                 new XElement("countryRanking", rankPlace),
                 new XElement("name", channelName),
-                new XElement("corporationName", corporationName),
-                new XElement("countryName", countryName),
+                new XElement("corporation",
+                    new XElement("corporationName", corporationName)
+                    ),
+                new XElement("country",
+                    new XElement("countryName", countryName)
+                    ),
                 new XElement("sponsors"),
                 new XElement("owner",
                     new XElement("firstName", ownerFirstName),
