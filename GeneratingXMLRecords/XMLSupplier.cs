@@ -22,18 +22,17 @@ namespace GeneratingXMLRecords
                 new XElement("countryRanking", rankPlace),
                 new XElement("name", channelName),
                 new XElement("corporation",
-                    new XElement("corporationName", corporationName)
+                    new XElement("corporationName", corporationName),
+                    new XElement("owner",
+                        new XElement("firstName", ownerFirstName),
+                        new XElement("lastName", ownerLastName),
+                        new XElement("netWorth", ownerNetWorth))
                     ),
                 new XElement("country",
                     new XElement("countryName", countryName)
                     ),
-                new XElement("sponsors"),
-                new XElement("owner",
-                    new XElement("firstName", ownerFirstName),
-                    new XElement("lastName", ownerLastName),
-                    new XElement("netWorth", ownerNetWorth))
-                    );
-
+                new XElement("sponsors")
+                );
             return channelXml;
         }
 
