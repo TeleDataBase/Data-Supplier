@@ -16,10 +16,20 @@ namespace GeneratingXMLRecords
 
             XElement hbo = xmlGenerator.CreateChannel("HBO", 6, "HBO Group", "USA", "Richard", "Plepler", 32000000);
 
-            var sponsor = xmlGenerator.CreateSponsor("Hippoland", "Igrachki za vas.");
+            var btvSponsor = xmlGenerator.CreateSponsor("Hippoland", "Igrachki za vas.");
+
+            var novaSponsor = xmlGenerator.CreateSponsor("Porsche", "Premiun cars.");
+
+            var hboSponsor = xmlGenerator.CreateSponsor("EVS", "Pharmacy for everyone.");
 
             xmlGenerator.AddChannelToCatalog(btv);
-            xmlGenerator.AddSponsorToChannel(sponsor, "BTV");
+            xmlGenerator.AddSponsorToChannel(btvSponsor, "BTV");
+
+            xmlGenerator.AddChannelToCatalog(nova);
+            xmlGenerator.AddSponsorToChannel(novaSponsor, "Nova");
+
+            xmlGenerator.AddChannelToCatalog(hbo);
+            xmlGenerator.AddSponsorToChannel(hboSponsor, "HBO");
 
             xmlGenerator.SaveChanges();
         }
