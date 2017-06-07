@@ -19,7 +19,7 @@ namespace GeneratingXMLRecords
             int ownerNetWorth)
         {
             XElement channelXml = new XElement("channel",
-                new XElement("countryRanking", rankPlace),
+                new XElement("worldRankplace", rankPlace),
                 new XElement("name", channelName),
                 new XElement("corporation",
                     new XElement("corporationName", corporationName),
